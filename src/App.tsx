@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Clock from "./component/Clock";
-import Person from "./component/Person";
+import Sidebar from "./components/Sidebar";
+import Post from "./components/Post";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <Person />
-      </header>
-    </div>
-  );
+    const [post, setPost] = useState({
+        title: 'Título maneiro',
+        content: 'Lorem Ipsum dolor sit amet',
+    })
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <Sidebar post={post}/>
+                <Post post={post} totalComments={5}/>
+            </header>
+        </div>
+    );
 }
 
 export default App;
