@@ -1,7 +1,6 @@
 export default function HelloWorld() {
-    const name  = 'Daniel'
-    const title = <h1>Hello, {name}</h1>
+    const name = 'Daniel'
     return <div>
-        {title}
+        <h1 tabIndex={0} style={{background: 'red'}}>Hello, {name}</h1>
     </div>
 }
