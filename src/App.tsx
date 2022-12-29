@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import Sidebar from "./components/Sidebar";
 import Post from "./components/Post";
+import Card from "./components/Card";
 
 function App() {
-    const [post, setPost] = useState({
+    const [post] = useState({
         title: 'Título maneiro',
         content: 'Lorem Ipsum dolor sit amet',
     })
@@ -12,8 +12,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <Sidebar post={post}/>
-                <Post post={post} totalComments={5}/>
+                <Card title={'Card'}>
+                    <Post post={post} totalComments={5}/>
+                </Card>
             </header>
         </div>
     );
