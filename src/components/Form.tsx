@@ -12,7 +12,6 @@ export default function Form() {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
-
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
         console.log(form)
