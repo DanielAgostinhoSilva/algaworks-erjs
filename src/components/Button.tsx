@@ -1,10 +1,14 @@
-import {Component} from "react";
+import {Component, PropsWithChildren} from "react";
 
-class Button extends Component {
+type ButtonProps = PropsWithChildren<{
+    onClick?: () => any
+}>
+
+class Button extends Component<ButtonProps> {
     render() {
-        return <div>
-            todo: Button
-        </div>;
+        return <button onClick={this.props.onClick}>
+            {this.props.children}
+        </button>;
     }
 }
 
