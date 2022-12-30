@@ -38,6 +38,10 @@ class Button extends Component<ButtonProps, ButtonState> {
     componentDidMount() {
         console.log("componentDidMount")
     }
+
+    componentDidUpdate(prevProps: Readonly<ButtonProps>, prevState: Readonly<ButtonState>, snapshot?: any) {
+        console.log("componentDidUpdate")
+    }
 }
 
 export default Button
