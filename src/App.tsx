@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
 
-    const names = ['Fulano a', 'Fulano b', 'Fulano c']
+    const [names, setNames] = useState(['Fulano a', 'Fulano b', 'Fulano c'])
+
+    useEffect(() => {
+        console.log(names)
+    },[names])
 
     return (
         <div className="App">
@@ -13,6 +17,9 @@ function App() {
                        names.map((name, index) => <li key={index}>{name}</li>)
                     }
                 </ul>
+                <button onClick={() => setNames([...names, 'Daniel'])}>
+                    Adicionar Daniel
+                </button>
 
             </header>
         </div>
