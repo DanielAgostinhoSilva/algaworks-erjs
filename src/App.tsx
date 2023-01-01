@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import useCounter from "./hooks/useCounter";
+import PeopleList from "./components/PeopleList";
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
         <div className="App">
             <header className="App-header">
                 {number}
+                <PeopleList />
+                <PeopleList />
             </header>
         </div>
     );
