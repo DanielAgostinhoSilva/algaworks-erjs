@@ -5,7 +5,7 @@ import PeopleList from "./components/PeopleList";
 
 function App() {
 
-    const number = useCounter()
+    const number = useCounter(5)
 
     return (
         <div className="App">
